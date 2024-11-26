@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.header {
+    background-color: #fff3c9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Email container styling */
+.email-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #e1e1e1;
+    border-radius: 25px;
+}
+
+/* Styling for email paragraph */
+#email {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Styling for the 'Copy' button */
+#copy-email {
+    padding: 8px 15px;
+    background-color: #414550;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.cv-button {
+    padding: 10px 20px;
+    background-color: #CD9E7D;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.right-header {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Styling for the separator (/) */
+.separator {
+    font-size: 16px;
+    color: #333;
+}
+
+.intro-container {
+    position: relative; /* Make the container relative to its child elements */
+    width: 100%;/* Full width of the container */
+    height: 100vh; /* Take full viewport height for the hero section */
+    overflow: hidden; /* Hide any content that goes outside the bounds */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Background Image Styling */
+.intro-container img:first-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Layered images like clouds, sun, birds, etc. */
+.intro-container img:not(:first-of-type) {
+    position: absolute;
+    z-index: 2;
+}
+
+.intro-container img.left-cloud {
+    top: -20%;/* Adjust the top position of the left cloud */
+    left: -15%;
+    width: 700px;
+}
+
+.intro-container img.right-cloud {
+    top: 5%;
+    right: -12%;
+    width: 600px;
+}
+
+.intro-container img.sun {
+    top: 3%;
+    right: -6%;
+    width: 400px;
+    z-index: 1;
+}
+
+.intro-container img.birds {
+    top: -10%;
+    left: 5%;
+    width: 400px;
+}
+
+.intro-container img.swan {
+    bottom: -15%;
+    left: -16%;
+    width: 610px;
+}
+
+.intro-container img.peacock {
+    bottom: -5%;
+    right: -6%;
+    width: 400px;
+    z-index: 2;
+}
+
+.intro-info {
+    text-align: center;
+    z-index: 3;
+}
+
+.intro-container img.profile {
+    position: relative;
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 5;
+}
+
+/* Styling for the text and button */
+.intro-container h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: "Quintessential", serif;
+}
+
+.text-swan {
+    text-decoration: underline;
+}
+
+.intro-container h3 {
+    font-size: 2rem;
+    margin-top: 10px;
+    font-style: italic;
+    font-family: "Schoolbell", cursive;
+    font-weight: 400;
+}
+
+/* .intro-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #D1E2C4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.intro-container button:hover {
+    background-color: #218838;
+} */
+
+.experience-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Space between the two boxes */
+    padding: 50px;
+    flex-wrap: wrap; /* Allow for responsivess */
+}
+
+/* Styling for each experience section */
+.education-section, .work-experiences-section {
+    width: 45%;
+    background-color: #cfe2f030;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.experience {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.experience-icon {
+    background-color: #414550;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.experience-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.school-name, .role {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.major, .company-name {
+    font-style: italic;
+    color: #5a5a5a;
+}
+
+.experience-icon i {
+    font-size: 1rem; /* icon size */
+}
+
+.skills-container {
+    background-color: #fff3c9;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 50px 25px 25px 25px;
+    flex-wrap: wrap; /* Allow for responsivess */
+}
+
+/* Styling for each skill section */
+.skill-section {
+    width: 22%;
+    background-color: #fff;
+    padding: 40px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+}
+
+.skill-icon {
+    background-color: lightblue;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: -40px;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Font size and color for the icon */
+.skill-icon i {
+    font-size: 36px;
+    color: white; /* White color for the icon */
+}
+
+/* Heading styling */
+.skill-section > h2 {
+    margin-top: 30px; /* Space below the icon */
+}
+
+.tools {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.description {
+    font-style: italic;
+    color: #5a5a5a;
+    margin: 15px 0;
+}
+
+.end-section {
+    width: 100%;
+    padding: 40px 20px;  /* Padding for spacing inside the section */
+    background-color: #414550;  /* Dark background to differentiate from other sections */
+    color: white;  /* White text color for contrast */
+    text-align: center;  /* Center the text */
+    position: relative;  /* Ensure the section stays in place */
+    bottom: 0;  /* Stick to the bottom of the page */
+    margin-top: 50px;  /* Add margin to avoid it sticking too closely to the previous content */
+}
+
+/* Styling for the h4 element */
+.end-section h4 {
+    font-family: "Schoolbell", cursive;
+    font-size: 1.6rem;  /* Slightly larger font size for emphasis */
+    font-weight: normal;  /* Light weight for the sentence */
+    margin-bottom: 20px;  /* Space below the heading */
+}
+
+/* Styling for the p element */
+.end-section p {
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: #aaa;  /* Slightly lighter color for the paragraph */
+}
+
+/* Make the layout responsive for smaller screens */
+@media (max-width: 768px) {
+    .experience-container {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+
+    .education-section, .work-experiences-section {
+        width: 100%; /* Take full width */
+    }
+
+    .skill-section {
+        width: 45%; /* Reduce the width to fit more on smaller screens */
+    }
+
+    .end-section h4 {
+        font-size: 1.3rem;  /* Adjust font size for smaller screens */
+    }
+
+    .end-section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-section {
+        width: 100%; /* Make each section full width on very small screens */
+    }
+}
